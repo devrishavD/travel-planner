@@ -1,1 +1,179 @@
 @import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Modern Dark Theme - Default */
+    /* Deep charcoal backgrounds */
+    --background: 220 15% 8%;
+    --foreground: 0 0% 95%;
+
+    /* Card panels - slightly lighter for depth */
+    --card: 220 15% 12%;
+    --card-foreground: 0 0% 95%;
+
+    /* Popover components */
+    --popover: 220 15% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Primary - Teal accent */
+    --primary: 180 100% 45%;
+    --primary-foreground: 220 15% 8%;
+    --primary-light: 180 80% 55%;
+    --primary-dark: 180 100% 35%;
+
+    /* Secondary - Muted gray panels */
+    --secondary: 220 10% 18%;
+    --secondary-foreground: 0 0% 85%;
+    --secondary-accent: 220 15% 25%;
+
+    /* Muted elements */
+    --muted: 220 10% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    /* Accent - Soft orange */
+    --accent: 25 100% 60%;
+    --accent-foreground: 220 15% 8%;
+    --accent-light: 25 80% 70%;
+    --accent-hover: 25 100% 50%;
+
+    /* Status colors - vibrant for dark background */
+    --success: 142 76% 50%;
+    --success-foreground: 220 15% 8%;
+    --warning: 45 100% 60%;
+    --warning-foreground: 220 15% 8%;
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 95%;
+
+    /* UI elements */
+    --border: 220 15% 22%;
+    --input: 220 15% 16%;
+    --ring: 180 100% 45%;
+
+    /* Dark theme gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(180 100% 45%) 0%, hsl(200 90% 50%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(25 100% 60%) 0%, hsl(35 100% 65%) 100%);
+    --gradient-forest: linear-gradient(135deg, hsl(150 60% 45%) 0%, hsl(170 50% 40%) 100%);
+    --gradient-sky: linear-gradient(180deg, hsl(220 50% 30%) 0%, hsl(230 40% 20%) 100%);
+
+    /* Enhanced shadows for depth */
+    --shadow-soft: 0 4px 12px hsl(220 15% 4% / 0.4);
+    --shadow-medium: 0 8px 24px hsl(220 15% 4% / 0.5);
+    --shadow-large: 0 16px 48px hsl(220 15% 4% / 0.6);
+    --shadow-glow: 0 0 24px hsl(180 100% 45% / 0.4);
+
+    /* Border radius */
+    --radius: 12px;
+
+    /* Sidebar - darker charcoal */
+    --sidebar-background: 220 20% 6%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 180 100% 45%;
+    --sidebar-primary-foreground: 220 15% 8%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 0 0% 85%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 180 100% 45%;
+  }
+
+  .light {
+    /* Light mode fallback - keeping original design */
+    --background: 210 25% 98%;
+    --foreground: 215 25% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 20%;
+    --primary: 200 85% 45%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 200 75% 65%;
+    --primary-dark: 200 90% 30%;
+    --secondary: 150 25% 85%;
+    --secondary-foreground: 150 30% 25%;
+    --secondary-accent: 150 40% 70%;
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 15% 55%;
+    --accent: 15 85% 65%;
+    --accent-foreground: 0 0% 98%;
+    --accent-light: 15 75% 75%;
+    --accent-hover: 15 90% 55%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 20% 88%;
+    --input: 215 20% 94%;
+    --ring: 200 85% 45%;
+    --gradient-ocean: linear-gradient(135deg, hsl(200 85% 45%) 0%, hsl(190 80% 55%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(15 85% 65%) 0%, hsl(35 90% 70%) 100%);
+    --gradient-forest: linear-gradient(135deg, hsl(150 40% 70%) 0%, hsl(170 35% 65%) 100%);
+    --gradient-sky: linear-gradient(180deg, hsl(200 75% 65%) 0%, hsl(210 70% 85%) 100%);
+    --shadow-soft: 0 2px 8px hsl(215 25% 20% / 0.08);
+    --shadow-medium: 0 4px 16px hsl(215 25% 20% / 0.12);
+    --shadow-large: 0 8px 32px hsl(215 25% 20% / 0.16);
+    --shadow-glow: 0 0 20px hsl(200 85% 45% / 0.3);
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+
+  /* Travel-themed utilities */
+  .gradient-ocean {
+    background: var(--gradient-ocean);
+  }
+  
+  .gradient-sunset {
+    background: var(--gradient-sunset);
+  }
+  
+  .gradient-forest {
+    background: var(--gradient-forest);
+  }
+  
+  .gradient-sky {
+    background: var(--gradient-sky);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .shadow-large {
+    box-shadow: var(--shadow-large);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.6);
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary));
+  }
+}
